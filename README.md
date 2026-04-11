@@ -173,3 +173,4 @@ MSc in Radiological Protection
 >
 > It is a framework for governing execution in a world where intelligent systems act.
 
+The DSAN protocol is open under Apache 2.0, while specific implementations may follow different licensing models.
