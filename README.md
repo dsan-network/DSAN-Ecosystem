@@ -230,3 +230,11 @@ It is an attempt to redefine how execution is governed
 in a world where systems are increasingly autonomous.
 
 ---
+
+## License
+
+This project is licensed under the Apache License 2.0.
+
+You are free to use, modify, and distribute this software, provided that proper attribution is maintained.
+
+For more details, see the LICENSE file.
