@@ -222,6 +222,16 @@ This repository represents the **conceptual and architectural foundation** of th
 
 ---
 
+## Intellectual Property Notice
+
+This repository contains part of the DSAN (Decentralized Sovereign Agent Network) framework.
+
+Certain aspects of the DSAN architecture, including applied systems and execution models, may be subject to intellectual property protection and are not fully disclosed in this repository.
+
+This repository provides a public reference implementation and conceptual architecture only.
+
+---
+
 ## 🧩 Final Note
 
 DSAN is not just a protocol.
