@@ -1,176 +1,232 @@
 # 🛡️ DSAN Ecosystem
 
-## A Framework for Governing Execution in Intelligent and Distributed Systems
+## A Governance Framework for Controlled Execution in Intelligent Systems
+
+---
+
+> Intelligent systems can decide freely.
+> They must not execute freely.
 
 ---
 
 ## 🌍 Overview
 
-The **DSAN Ecosystem** is a multi-layered framework designed to enable:
+The **DSAN (Decentralized Sovereign Agent Network)** introduces a new architectural paradigm for governing execution in intelligent and distributed systems.
 
-* Sovereign identity
-* Secure communication
-* Controlled execution
-* Accountable decision-making
+As artificial intelligence, automation, and distributed infrastructures evolve, a critical gap emerges:
 
-in distributed and intelligent systems.
+> There is no universal mechanism to control *what gets executed*.
 
-It addresses a fundamental gap in modern technology:
+DSAN addresses this gap by separating:
 
-> There is no universal mechanism to govern how autonomous decisions are executed.
+* **Decision (unrestricted)**
+* **Execution (policy-controlled)**
 
 ---
 
-## 🧠 Core Concept
+## ⚠️ The Problem
 
-> Systems may decide freely.
-> Systems must not execute freely.
+Modern systems are increasingly capable of:
 
-Execution must be **validated, authorized, and traceable**.
+* generating autonomous decisions
+* interacting with real-world environments
+* executing actions at scale
+
+However, current architectures assume:
+
+> **Decision → Execution**
+
+This creates systemic risks:
+
+* uncontrolled automation
+* propagation of errors at scale
+* lack of accountability
+* inability to audit decision pathways
+
+---
+
+## 🧠 The DSAN Model
+
+DSAN introduces an intermediary layer:
+
+> **Decision → Validation → Execution**
+
+Where:
+
+* **DSAN** defines identity, communication, and agent integrity
+* **EPL (Execution Policy Layer)** governs execution through contextual validation
 
 ---
 
 ## 🧱 Architecture
 
-```text
-DSAN (Identity & Communication Layer)
-        ↓
-EPL (Execution Policy Layer)
-        ↓
-Applied Systems (Domain Implementations)
-```
-
----
-
-### 🛡️ DSAN — Decentralized Sovereign Agent Network
-
-Provides:
-
-* Deterministic identity
-* Cryptographic integrity
-* Secure communication
-* Adversarial resilience
+### 🔹 DSAN Layer — Identity & Trust
 
 Defines:
 
-> **Who acts and what is authentic**
+* who is acting
+* authenticity of agents
+* integrity of communication
+
+Core properties:
+
+* sovereign identity
+* cryptographic verification
+* deterministic agent continuity
 
 ---
 
-### ⚖️ EPL — Execution Policy Layer
-
-Provides:
-
-* Policy-based execution control
-* Context-aware validation
-* Action authorization
-* Traceability
+### 🔹 EPL Layer — Execution Governance
 
 Defines:
 
-> **What is allowed to happen**
+* what can be executed
+* under which conditions
+* with which authority
+
+Core properties:
+
+* policy-based validation
+* contextual decision enforcement
+* execution constraints
 
 ---
 
-## 🧩 Applied Systems (Abstracted)
+## 🧩 What DSAN is NOT
 
-The ecosystem is being explored through domain-specific implementations, including:
+* Not a blockchain protocol
+* Not an AI model
+* Not a cybersecurity tool
 
-* Healthcare decision governance
-* Financial execution systems
-* Identity-linked transactional frameworks
+> DSAN is a **governance layer for execution**.
 
-> Detailed implementations are not publicly available at this stage.
+---
+
+## ⚙️ Core Principles
+
+* **Separation of decision and execution**
+* **Sovereign identity**
+* **Bounded autonomy**
+* **Auditability by design**
+* **Trust minimization**
+* **Resistance to centralized capture**
+* **Adaptability across domains**
+
+---
+
+## 🔍 Example
+
+A clinical system recommends a radiological exam.
+
+**Without DSAN:**
+
+Decision → Execution
+→ exam is performed automatically
+
+**With DSAN:**
+
+Decision → Validation → Execution
+
+→ system checks:
+
+* prior exams
+* clinical context
+* policy constraints
+
+→ execution may be:
+
+* approved
+* modified
+* rejected
+
+---
+
+## 🌐 Applications (Abstracted)
+
+DSAN is designed as a **general-purpose governance layer**, applicable to:
+
+* healthcare decision systems
+* financial execution frameworks
+* autonomous agents and AI systems
+* distributed identity infrastructures
+
+Specific implementations are intentionally abstracted.
 
 ---
 
 ## 📄 Whitepaper
 
-* 🇺🇸 [English Version](./whitepaper/DSAN_EPL_Whitepaper_v2.2_EN.pdf)
-* 🇧🇷 [Versão em Português](./whitepaper/DSAN_EPL_Whitepaper_v2.2_PT.pdf)
+Full technical and conceptual specification:
+
+* 🇺🇸 [English Version](./whitepaper/DSAN_EPL_Whitepaper_v2.2_EN.md)
+* 🇧🇷 [Versão em Português](./whitepaper/DSAN_EPL_Whitepaper_v2.2_PT.md)
 
 ---
 
-## 🔐 Intellectual Property
+## 🏛️ Governance Model
 
-The DSAN Ecosystem follows a hybrid model:
+The DSAN ecosystem is designed to evolve through:
 
-* Core concepts are openly documented
-* Certain implementations are protected
+* coordinated development
+* hybrid governance models
+* progressive decentralization
 
-Some components are subject to pending patent applications filed with the Instituto Nacional da Propriedade Industrial.
-
-Implementation details are intentionally abstracted.
-
----
-
-## 🔒 Development Status
-
-Some systems within the DSAN Ecosystem are not publicly available due to:
-
-* Technical sensitivity
-* Regulatory considerations
-* Intellectual property protection
-
-Public releases will occur progressively.
+All evolution must preserve core principles of execution control and system integrity.
 
 ---
 
-## 🎯 Design Principles
+## ⚖️ License & Intellectual Property
 
-* Sovereign Identity
-* Separation of Decision and Execution
-* Bounded Autonomy
-* Auditability
-* Trust Minimization
-* Resistance to Capture
-* Technological Adaptability
+The DSAN Ecosystem is released under the **Apache License 2.0**, enabling open collaboration and adoption.
 
----
+### 🔓 Open Layer
 
-## 🏛️ Governance
+* protocol concepts
+* architectural models
+* reference documentation
 
-The ecosystem evolves through:
+### 🔒 Controlled Layer
 
-1. Coordinated phase
-2. Hybrid governance
-3. Distributed governance
+Certain implementations (e.g., domain-specific systems, advanced execution logic) are:
 
-Changes follow structured proposal mechanisms.
+* proprietary
+* restricted
+* subject to controlled deployment
 
----
+### 🧾 Intellectual Property Notice
 
-## 📂 Documentation
-
-* [Architecture](./docs/architecture.md)
-* [Principles](./docs/principles.md)
-* [Governance](./docs/governance.md)
-* [Related Work](./references/related-work.md)
+Some aspects of the DSAN model are subject to **pending intellectual property protection**, including filings with the Instituto Nacional da Propriedade Industrial.
 
 ---
 
-## 🤝 Contributing
+## 🧠 Philosophy
 
-We welcome collaboration from:
-
-* Engineers
-* Researchers
-* Healthcare professionals
-* Governance and policy specialists
+> Open protocol.
+> Controlled execution.
+> Protected innovation.
 
 ---
 
 ## 📬 Contact
 
-**Alessandro Turok da Silva Collares**
+Alessandro Turok da Silva Collares
 MSc in Radiological Protection
 
 ---
 
-## 🧠 Final Statement
+## 🚧 Status
 
-> The DSAN Ecosystem is not just a technology stack.
->
-> It is a framework for governing execution in a world where intelligent systems act.
+DSAN is an evolving framework under active development.
 
-The DSAN protocol is open under Apache 2.0, while specific implementations may follow different licensing models.
+This repository represents the **conceptual and architectural foundation** of the ecosystem.
+
+---
+
+## 🧩 Final Note
+
+DSAN is not just a protocol.
+
+It is an attempt to redefine how execution is governed
+in a world where systems are increasingly autonomous.
+
+---
