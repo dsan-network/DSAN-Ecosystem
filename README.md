@@ -1,3 +1,5 @@
+![License](https://img.shields.io/badge/license-Apache%202.0-blue)
+
 # 🛡️ DSAN Ecosystem
 
 ## A Governance Framework for Controlled Execution in Intelligent Systems
