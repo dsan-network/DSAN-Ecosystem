@@ -227,6 +227,14 @@ It does NOT include:
 
 ---
 
+## DSAN Ecosystem
+
+This repository is part of the DSAN Network.
+
+Core protocol:
+👉 https://github.com/dsan-network/dsan-ecosystem
+
+---
 ## 📬 Contact
 
 Alessandro Turok da Silva Collares
