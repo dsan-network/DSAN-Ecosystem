@@ -1,172 +1,284 @@
-# DSAN / EPL — Whitepaper v2.2  
-## Um Framework de Governança para Controle de Execução em Sistemas Inteligentes
+# 🛡️ DSAN — Decentralized Sovereign Agent Network
+
+### Whitepaper v2.3 — Extended Sovereign Execution Architecture
+
+**Author:** Alessandro Turok da Silva Collares
+**Version:** 2.3
+**Date:** 2026
 
 ---
 
-## 1. Resumo
+# 1. Executive Summary
 
-Este documento apresenta a Decentralized Sovereign Agent Network (DSAN) e sua Execution Policy Layer (EPL), um framework projetado para regular a execução de ações em sistemas inteligentes e distribuídos.
+The DSAN (Decentralized Sovereign Agent Network) is a distributed architecture designed to enable **sovereign, traceable, and physically authorized digital execution**.
 
-O modelo separa autonomia cognitiva de autoridade de execução, permitindo decisões livres, mas restringindo ações por meio de validação.
+Unlike traditional distributed systems, DSAN integrates:
 
----
+* cryptographic identity
+* contextual execution control
+* physical authorization mechanisms
 
-## 2. Introdução
-
-Sistemas tecnológicos evoluíram para agentes capazes de:
-
-- tomar decisões  
-- interagir autonomamente  
-- executar ações no mundo real  
-
-Isso gera um problema estrutural:
-
-> Ausência de mecanismos universais de controle de execução.
+This transforms digital systems into **verifiable execution infrastructures**, applicable across critical domains such as healthcare, finance, and governance.
 
 ---
 
-## 3. Problema
+# 2. Version Evolution
 
-Modelo atual:
+### v2.2 — Technical Foundation
 
-Decisão → Execução
+* Core protocol definition
+* Cryptographic identity model
+* Network communication structure
 
-Isso leva a:
+### v2.3 — Architectural Expansion
 
-- execução descontrolada  
-- risco sistêmico  
-
----
-
-## 4. Modelo Proposto
-
-DSAN/EPL introduz:
-
-Decisão → Validação → Execução
+* Introduction of Execution Context Layer (ECL)
+* Formalization of Totem Layer (TL)
+* Hybrid execution model (on-cloud / off-cloud)
+* Sovereign execution framework refinement
 
 ---
 
-## 5. Arquitetura
+# 3. Problem Statement
 
-### DSAN
+Modern digital systems suffer from structural limitations:
 
-- identidade  
-- comunicação  
-- autenticidade  
+* digital identity is replicable
+* execution is automated without physical control
+* dependency on centralized infrastructure
+* lack of decision traceability
 
-Define:
+These limitations result in:
 
-> Quem age
-
----
-
-### EPL
-
-- validação  
-- controle  
-- autorização  
-
-Define:
-
-> O que pode ser executado
+* governance fragility
+* systemic vulnerabilities
+* loss of execution sovereignty
 
 ---
 
-## 6. Modelo Operacional
+# 4. Proposed Model
 
-Execução depende de:
+DSAN introduces a triadic execution model based on:
 
-- contexto  
-- restrições  
-- autoridade  
+1. Cryptographic Identity
+2. Execution Context (ECL)
+3. Physical Authorization (Totem Layer)
 
----
-
-## 7. Princípios
-
-- separação decisão-execução  
-- identidade soberana  
-- autonomia delimitada  
-- auditabilidade  
-- minimização de confiança  
+> Digital actions are executed only when identity, context, and authorization are simultaneously validated.
 
 ---
 
-## 8. Segurança
+# 5. System Architecture
 
-- ambientes adversariais  
-- validação rigorosa  
-- rejeição de inconsistências  
+The DSAN architecture is composed of four layers:
 
----
-
-## 9. Governança
-
-Evolução:
-
-- centralizada → híbrida → distribuída  
+* Cryptographic Layer
+* Network Layer
+* Execution Context Layer (ECL)
+* Totem Layer (TL)
 
 ---
 
-## 10. Considerações Sociais
+# 6. Cryptographic Layer
 
-- sistemas tendem à concentração de poder  
-- agentes são falíveis  
+Responsible for:
 
-Objetivo:
+* identity generation (Ed25519)
+* digital signatures
+* secure key exchange (X25519 + HKDF)
 
-Controlar o poder de execução.
+Ensures:
 
----
-
-## 11. Modelo Econômico
-
-O protocolo é aberto.
-
-Valor vem de:
-
-- aplicações  
-- serviços  
-- conformidade  
+* authenticity
+* integrity
+* confidentiality
 
 ---
 
-## 12. Aplicações (Abstratas)
+# 7. Network Layer
 
-- saúde  
-- finanças  
-- identidade  
+Responsible for:
 
----
+* agent communication
+* message transport
+* synchronization
 
-## 13. Propriedade Intelectual
-
-Alguns aspectos podem estar protegidos por pedidos de patente junto ao Instituto Nacional da Propriedade Industrial (INPI).
-
-Detalhes sensíveis foram abstraídos.
+Designed as a minimal, extensible communication substrate.
 
 ---
 
-## 14. Limitações
+# 8. Execution Context Layer (ECL)
 
-- dependência de políticas  
-- risco de governança  
-- complexidade  
+## 8.1 Definition
 
----
-
-## 15. Futuro
-
-- políticas adaptativas  
-- interoperabilidade  
-- verificação formal  
+Defines the operational environment in which DSAN agents execute actions.
 
 ---
 
-## 16. Conclusão
+## 8.2 Modes
 
-O DSAN/EPL propõe:
+### On-Cloud
 
-> Execução controlada, mesmo com alta inteligência.
+* connected
+* interoperable
+* scalable
+
+### Off-Cloud
+
+* local execution
+* independent
+* resilient
+
+### Hybrid
+
+* adaptive switching
+* local-first behavior
+* optional synchronization
 
 ---
+
+## 8.3 System Role
+
+The ECL enables:
+
+* context-aware execution
+* infrastructure independence
+* resilience under adverse conditions
+
+DSAN is **cloud-adaptive, not cloud-dependent**.
+
+---
+
+# 9. Totem Layer (TL)
+
+## 9.1 Definition
+
+The Totem Layer represents the physical or hardware-bound component that anchors execution to a verifiable entity.
+
+---
+
+## 9.2 Core Functions
+
+* identity anchoring
+* physical validation (gesture, biometrics, presence)
+* execution authorization
+* off-cloud enablement
+
+---
+
+## 9.3 Security Model
+
+The Totem Layer ensures:
+
+* non-transferable identity
+* resistance to remote compromise
+* prevention of uncontrolled automation
+
+> Cryptography proves validity.
+> The Totem proves control.
+
+---
+
+## 9.4 Evolution Path
+
+Totem systems may evolve across:
+
+* embedded hardware
+* wearable devices
+* biometric-integrated systems
+
+---
+
+## 9.5 Structural Role
+
+The Totem Layer is a **mandatory architectural component** for sovereignty.
+
+---
+
+# 10. Execution Model
+
+Standard flow:
+
+1. identity is validated
+2. totem authorizes
+3. execution context is defined
+4. action is executed
+
+---
+
+# 11. Use Cases
+
+## 11.1 Healthcare — RadSecure
+
+* longitudinal dose governance
+* clinical decision traceability
+* audit-ready systems
+
+## 11.2 Finance — DSAN-DREX
+
+* sovereign identity
+* physically validated transactions
+* fraud mitigation
+
+---
+
+# 12. Socio-Technical Implications
+
+## Governance
+
+Decentralized execution with controlled authorization.
+
+## Sovereignty
+
+Reduced dependency on centralized infrastructure.
+
+## Security
+
+Dual-layer model (cryptographic + physical).
+
+## Economy
+
+New models of verifiable execution and trust.
+
+## Human Interface
+
+Execution tied to physical presence and responsibility.
+
+---
+
+# 13. Limitations
+
+* hardware dependency (Totem Layer)
+* implementation complexity
+* standardization requirements
+
+---
+
+# 14. Roadmap
+
+* full Totem integration
+* Execution Policy Layer (EPL)
+* distributed scaling
+* real-world validation
+
+---
+
+# 15. Intellectual Property
+
+Certain DSAN components, including applied systems such as RadSecure, are under protection processes before the Instituto Nacional da Propriedade Industrial.
+
+---
+
+# 16. Conclusion
+
+DSAN represents a structural transition:
+
+> from passive digital systems to sovereign execution infrastructures.
+
+By integrating identity, context, and physical authorization, DSAN establishes a new paradigm for digital control and accountability.
+
+---
+
+# 17. Vision
+
+> A world where digital actions are executed with verifiable identity, contextual awareness, and real-world accountability.
