@@ -201,6 +201,24 @@ Some aspects of the DSAN model are subject to **pending intellectual property pr
 
 ---
 
+## Scope
+
+DSAN is an open protocol for execution governance.
+
+This repository defines:
+
+- architectural principles  
+- protocol structure  
+- reference models  
+
+It does NOT include:
+
+- production-grade execution systems  
+- proprietary implementations  
+- domain-specific deployments  
+
+---
+
 ## 🧠 Philosophy
 
 > Open protocol.
