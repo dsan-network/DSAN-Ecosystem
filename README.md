@@ -1,118 +1,107 @@
 # 🛡️ DSAN Ecosystem
 
-**Execution Governance for Autonomous and Distributed Systems**
+> **An Open Architecture for Governed Execution**
 
-[![License: Apache 2.0](https://img.shields.io/badge/license-Apache%202.0-blue.svg)](LICENSE)
+![License](https://img.shields.io/badge/license-Apache%202.0-blue.svg)
+![Status](https://img.shields.io/badge/status-Research-green)
+![Architecture](https://img.shields.io/badge/specification-open-success)
 
 ---
 
-# Why DSAN Exists
+# Introduction
 
-Computing has solved many fundamental problems.
+The **Decentralized Sovereign Agent Network (DSAN)** is an open architectural framework for governing execution in autonomous and distributed systems.
 
-We know how to:
+Rather than replacing existing technologies, DSAN introduces an additional protocol layer responsible for determining **whether**, **when**, and **under which conditions** an action may be executed.
 
-- identify users,
-- encrypt communications,
-- authenticate software,
-- distribute computation,
-- build increasingly autonomous systems.
+Modern software already provides mechanisms for identity, communication, distributed consensus, and decision making.
 
-Yet one fundamental capability remains largely absent from modern computing:
+DSAN focuses on a different problem:
 
-> **Who governs execution?**
+> **Execution itself.**
 
-As artificial intelligence, automation and distributed infrastructures continue to evolve, systems are increasingly capable of making decisions and acting upon them.
+Execution becomes an explicit protocol event governed by verifiable rules rather than an implicit consequence of a decision.
 
-Most architectures still assume:
+---
 
-```
-Decision → Execution
-```
+# Why DSAN?
 
-DSAN proposes a different model.
+Autonomous systems continue to increase their decision-making capabilities.
+
+Artificial Intelligence, distributed services, robotics, healthcare platforms and financial infrastructures are increasingly capable of generating actions without continuous human intervention.
+
+Most current architectures still assume:
 
 ```
+
 Decision
-      │
-      ▼
-Validation
-      │
-      ▼
+↓
 Execution
+
 ```
 
-Execution is no longer implicit.
+This assumption becomes progressively more dangerous as software gains autonomy.
+
+DSAN proposes a different execution model.
+
+```
+
+Decision
+↓
+Validation
+↓
+Execution
+
+```
+
+Execution is no longer automatic.
 
 Execution becomes governed.
 
 ---
 
-# What is DSAN?
+# Execution Governance
 
-**DSAN (Decentralized Sovereign Agent Network)** is an architectural framework for governing execution in autonomous and distributed systems.
+Execution Governance is the central architectural concept introduced by DSAN.
 
-Rather than replacing existing technologies, DSAN introduces an additional architectural layer responsible for determining **whether**, **when**, and **under which conditions** an action may be executed.
+A valid request is not sufficient to authorize execution.
 
-DSAN separates:
+Instead, execution becomes the result of multiple independent verification stages.
 
-- decision making,
-- execution authorization,
-- execution itself.
+Typical governance stages include:
 
-This separation allows intelligent systems to remain autonomous while preventing uncontrolled execution.
+- Identity Verification
+- Context Evaluation
+- Policy Validation
+- Consensus (optional)
+- Physical Authorization (optional)
+- Execution Authorization
+- Evidence Generation
+- Ledger Registration
 
----
-
-# The Structural Problem
-
-Modern systems increasingly rely on:
-
-- Artificial Intelligence
-- Autonomous Agents
-- Robotics
-- Distributed Infrastructure
-- Financial Automation
-- Clinical Decision Support
-- Machine-to-Machine Interaction
-
-These systems can generate actions at enormous scale.
-
-However, very few architectures distinguish between:
-
-> **being able to decide**
-
-and
-
-> **being allowed to execute.**
-
-The result is growing systemic risk.
-
-Examples include:
-
-- uncontrolled automation,
-- cascading execution errors,
-- poor accountability,
-- insufficient auditability,
-- centralized execution trust.
-
-DSAN addresses execution itself as an architectural concern.
+Each stage contributes independently to the final execution decision.
 
 ---
 
-# Core Principles
+# Architectural Principles
 
-The ecosystem is built around several principles.
+Every DSAN implementation follows the same architectural principles.
 
-## Execution Governance
+## Explicit Execution
 
-Execution must be explicitly authorized.
+Critical actions SHALL be explicitly authorized.
 
 ---
 
-## Sovereign Identity
+## Identity Before Authority
 
-Every actor possesses a verifiable cryptographic identity.
+Every execution request originates from a verifiable identity.
+
+---
+
+## Policy Before Execution
+
+Execution is governed by explicit policies.
 
 ---
 
@@ -122,309 +111,296 @@ Execution depends on operational context.
 
 ---
 
-## Policy Enforcement
-
-Execution is constrained by explicit policies rather than implicit application logic.
-
----
-
 ## Physical Accountability
 
-Certain actions require physical authorization before execution.
+Some actions require explicit physical authorization.
 
 ---
 
-## Deterministic Verification
+## Independent Verification
 
-Executed history must always be independently verifiable.
+Execution history shall be independently verifiable.
 
 ---
 
-## Trust Minimization
+## Minimal Trust
 
-Verification should depend on evidence rather than institutional trust.
+Trust is derived from evidence rather than institutional assumptions.
 
 ---
 
 # High-Level Architecture
 
 ```
-                 DSAN Ecosystem
 
-                Decision Layer
-                       │
-                       ▼
-             Execution Policy Layer
-                   (EPL)
-                       │
-                       ▼
-          Context Evaluation Layer
-                   (ECL)
-                       │
-                       ▼
-             Totem Authorization
-                       │
-                       ▼
-               DSAN-core Kernel
-                       │
-                       ▼
-             Replay & Verification
-                       │
-                       ▼
-              Independent Audit
-```
+                   DSAN Ecosystem
 
-Each layer has a distinct responsibility.
+                         │
 
----
+             Execution Governance Layer
 
-# Main Components
+                         │
 
-## DSAN-core
+      ┌──────────────────┼──────────────────┐
 
-The execution kernel.
+      ▼                  ▼                  ▼
 
-Responsible for:
+ Identity           Policy Engine      Context Engine
 
-- event validation,
-- governed execution,
-- deterministic replay,
-- ledger persistence,
-- state verification,
-- independent audit.
+      │                  │                  │
 
-Repository:
+      └──────────────┬──────────────────────┘
 
-```
-github.com/dsan-network/dsan-core
-```
+                     ▼
 
----
+        Execution Authority Function
 
-## Execution Policy Layer (EPL)
+                     │
 
-Defines:
+        Guardian Authorization (optional)
 
-- execution rules,
-- permissions,
-- contextual restrictions,
-- admissibility criteria.
+                     │
 
-The EPL determines whether execution is allowed.
+                     ▼
 
----
+              Governed Execution
 
-## Execution Context Layer (ECL)
+                     │
 
-Determines the operational environment.
+                     ▼
 
-Execution may occur:
+             Evidence Generation
 
-- locally,
-- in cloud environments,
-- offline,
-- in hybrid deployments.
+                     │
 
-DSAN adapts to infrastructure instead of depending on it.
+                     ▼
 
----
+               Execution Ledger
 
-## Totem Layer
+                     │
 
-The Totem provides physical authorization.
+                     ▼
 
-Cryptography proves identity.
-
-The Totem proves intentional execution.
-
-Future implementations include the **DSAN Guardian**, a dedicated hardware authorization device integrating:
-
-- secure cryptographic hardware,
-- biometrics,
-- NFC credentials,
-- trusted execution authorization.
-
----
-
-# Execution Model
-
-DSAN introduces a governed execution pipeline.
+          Replay & Independent Audit
 
 ```
+
+---
+
+# Core Concepts
+
+The architecture is organized around several protocol concepts.
+
+## Identity
+
+Provides cryptographic attribution.
+
+Identity answers:
+
+> Who is requesting execution?
+
+---
+
+## Context
+
+Represents the operational environment.
+
+Examples include:
+
+- location;
+- operational mode;
+- execution history;
+- environmental conditions.
+
+Context answers:
+
+> Under which conditions is execution occurring?
+
+---
+
+## Policy
+
+Defines admissibility.
+
+Policy determines whether execution is permitted.
+
+---
+
+## Guardian
+
+Guardian introduces physical authorization into the execution pipeline.
+
+Guardian implementations may include:
+
+- biometrics;
+- NFC credentials;
+- secure hardware;
+- trusted execution devices.
+
+Guardian answers:
+
+> Was execution intentionally authorized?
+
+---
+
+## Evidence
+
+Execution produces verifiable evidence.
+
+Evidence allows independent reconstruction of the authorization process.
+
+---
+
+## Ledger
+
+Execution history is preserved using integrity-preserving storage.
+
+The architecture intentionally does not require blockchain technology.
+
+---
+
+# Trust Model
+
+DSAN defines four complementary trust domains.
+
+- Cryptographic Trust
+- Policy Trust
+- Physical Trust
+- Evidence Trust
+
+Governed execution is achieved only when every mandatory trust domain has been satisfied.
+
+---
+
+# Governance Model
+
+DSAN separates:
+
+Intent
+
+↓
+
 Identity
-      │
-      ▼
-Decision
-      │
-      ▼
-Policy Validation
-      │
-      ▼
-Context Evaluation
-      │
-      ▼
-Consensus
-      │
-      ▼
-Totem Authorization
-      │
-      ▼
-Execution
-      │
-      ▼
-Replay
-      │
-      ▼
-Independent Audit
-```
 
-Every executed action leaves sufficient evidence for later verification.
+↓
+
+Policy
+
+↓
+
+Authorization
+
+↓
+
+Execution
+
+↓
+
+Evidence
+
+↓
+
+Ledger
+
+This separation prevents execution from becoming an implicit consequence of software decisions.
 
 ---
 
-# Example
-
-A clinical AI recommends a CT examination.
-
-Traditional architecture:
+# Repository Structure
 
 ```
-Decision
-      │
-      ▼
-Execution
+
+DSAN Network
+
+├── dsan-network
+│
+├── dsan-ecosystem
+│
+├── dsan-core
+│
+├── dsan-guardian
+│
+├── dsan-simulator
+│
+└── Domain Applications
+
 ```
-
-DSAN architecture:
-
-```
-Decision
-
-↓
-
-Policy Validation
-
-↓
-
-Clinical Context
-
-↓
-
-Totem Authorization
-
-↓
-
-Execution
-
-↓
-
-Audit
-```
-
-The examination only proceeds after every execution requirement has been satisfied.
 
 ---
 
-# Potential Domains
+# Relationship with Other Projects
 
-DSAN is intentionally domain-independent.
+## DSAN Core
 
-Potential applications include:
+Implements the execution kernel defined by this architecture.
 
+---
+
+## DSAN Guardian
+
+Implements the Guardian Protocol using dedicated hardware.
+
+---
+
+## DSAN Simulator
+
+Provides educational and experimental implementations.
+
+---
+
+## Domain Applications
+
+The architecture is intentionally domain independent.
+
+Current applications include:
+
+- RadSecure
+- AI systems
 - Healthcare
-- Financial Infrastructure
-- Autonomous Agents
-- Artificial Intelligence
-- Critical Infrastructure
 - Industrial Automation
-- Government Systems
-- Distributed Identity
-- Cyber-Physical Systems
+- Critical Infrastructure
+- Financial Systems
 
 ---
 
-# Current Ecosystem
+# Specifications
 
-The public ecosystem currently consists of:
+The conceptual architecture is formally described by the DSAN Specification Series.
 
-```
-DSAN Ecosystem
-│
-├── DSAN-core
-│      Verifiable execution kernel
-│
-├── DSAN Guardian
-│      Physical authorization device
-│
-├── RadSecure
-│      Healthcare execution governance
-│
-└── Future domain-specific implementations
-```
+Important specifications include:
+
+- Architecture
+- Identity
+- Execution Model
+- Guardian Protocol
+- Execution Policy
+- Execution Evidence
+- Execution Ledger
 
 ---
 
 # Research Status
 
-DSAN is an active research and engineering initiative.
+DSAN remains an active research initiative.
 
-Current efforts focus on:
+Current research areas include:
 
-- execution governance,
-- deterministic replay,
-- physical authorization,
-- execution policy,
-- distributed verification,
-- sovereign digital identity.
-
-Several concepts remain under active evolution.
+- Execution Governance
+- Sovereign Identity
+- Deterministic Replay
+- Physical Authorization
+- Trusted Execution
+- Distributed Verification
 
 ---
 
-# Open Architecture
+# License
 
-The conceptual architecture is openly documented.
-
-Public repositories include:
-
-- protocol concepts,
-- architectural documentation,
-- reference implementations,
-- research artifacts.
-
-Some implementation details remain intentionally undisclosed.
+Apache License 2.0.
 
 ---
 
-# Intellectual Property
-
-DSAN is released under the Apache 2.0 License.
-
-Certain implementation techniques, execution models, hardware mechanisms and domain-specific systems may be subject to ongoing intellectual property protection.
-
-The public repositories intentionally omit sensitive implementation details.
-
----
-
-# Vision
-
-Modern computing has spent decades learning **how systems think.**
-
-The next challenge is learning **how systems should act.**
-
-DSAN explores an execution model where every action is:
-
-- attributable,
-- governed,
-- context-aware,
-- physically accountable,
-- independently verifiable.
-
-Execution itself becomes a first-class architectural primitive.
-
----
-
-## Contact
+# Founder
 
 **Alessandro Turok da Silva Collares**
 
@@ -432,6 +408,4 @@ Founder — DSAN Network
 
 ---
 
-**DSAN Network**
-
-*A new architectural foundation for governed execution.*
+> **DSAN transforms execution from an implicit software operation into a governed architectural capability.**
