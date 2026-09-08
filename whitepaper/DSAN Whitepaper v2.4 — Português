@@ -1,0 +1,846 @@
+# 🛡️ DSAN — Decentralized Sovereign Agent Network
+
+## Whitepaper v2.4 — Arquitetura de Soberania Digital e Execução Governada
+
+**Autor:** Alessandro Turok da Silva Collares
+**Versão:** 2.4
+**Data:** 2026
+**Status:** Architectural / Research Whitepaper
+
+---
+
+# 1. Resumo Executivo
+
+O DSAN — **Decentralized Sovereign Agent Network** — é uma arquitetura distribuída destinada a permitir que entidades soberanas mantenham identidade, autoridade, estado, relações e capacidade de atuação verificáveis em ambientes computacionais distribuídos.
+
+O DSAN não deve ser entendido simplesmente como uma rede, blockchain, sistema de identidade, mecanismo de autenticação ou plataforma de execução.
+
+Seu objetivo arquitetural é estabelecer uma separação clara entre:
+
+* a entidade soberana;
+* sua manifestação operacional;
+* o ambiente computacional no qual essa manifestação é protegida;
+* os mecanismos de identidade, estado, autorização e delegação;
+* os mecanismos de presença e interação física;
+* a comunicação distribuída;
+* a execução efetiva;
+* e as evidências produzidas pelas operações.
+
+O princípio fundamental é:
+
+> **A soberania pertence à entidade. O Guardian a manifesta operacionalmente. O GuardianOS protege e executa essa manifestação. O Totem pode fornecer uma âncora física. O DSAN Core estrutura os mecanismos verificáveis. A DSAN Network permite interação distribuída.**
+
+O DSAN, portanto, não define uma sequência única e obrigatória de execução. Sua arquitetura é predominantemente **relacional**: diferentes propriedades podem ser avaliadas em diferentes ordens, em paralelo ou conforme o contexto, o estado e as políticas aplicáveis.
+
+---
+
+# 2. Evolução Arquitetural
+
+## 2.1 v2.2 — Fundação Técnica
+
+A versão 2.2 estabeleceu elementos fundamentais relacionados a:
+
+* identidade criptográfica;
+* eventos;
+* comunicação;
+* execução;
+* mecanismos de verificação;
+* estrutura distribuída.
+
+## 2.2 v2.3 — Expansão para Execução Soberana
+
+A versão 2.3 introduziu:
+
+* Execution Context Layer;
+* Totem Layer;
+* execução híbrida;
+* operação on-cloud e off-cloud;
+* mecanismos de autorização física.
+
+## 2.3 v2.4 — Consolidação Arquitetural
+
+A versão 2.4 reorganiza esses conceitos em torno de uma arquitetura mais geral.
+
+As principais mudanças são:
+
+* introdução explícita da **Entidade Soberana** como referência ontológica;
+* definição do **Guardian** como manifestação operacional;
+* definição do **GuardianOS** como ambiente computacional de proteção e execução;
+* redefinição do **Totem** como âncora física opcional e contextual;
+* separação entre identidade, presença, intenção, autoridade e autorização;
+* separação entre autorização e execução;
+* formalização do estado soberano;
+* delegação limitada e revogável;
+* comunicação e sincronização como mecanismos independentes;
+* arquitetura relacional em vez de pipeline obrigatório;
+* separação entre arquitetura, implementação e aplicação de domínio.
+
+---
+
+# 3. O Problema
+
+Sistemas digitais contemporâneos normalmente organizam controle em torno de:
+
+**plataforma → conta → credencial → sessão → execução.**
+
+Esse modelo cria dependências importantes.
+
+A identidade frequentemente está vinculada a uma plataforma. A execução pode depender de serviços externos. Credenciais podem ser utilizadas sem evidência suficiente de intenção. Sistemas distribuídos podem possuir múltiplas representações de estado sem uma forma comum de estabelecer sua proveniência.
+
+Além disso, identidade, autorização e execução são frequentemente tratados como se fossem praticamente equivalentes.
+
+O DSAN parte de uma premissa diferente:
+
+> **identidade não é autoridade; autoridade não é autorização; autorização não é execução.**
+
+O objetivo não é eliminar plataformas ou infraestrutura externa, mas impedir que essas infraestruturas sejam necessariamente a raiz da soberania da entidade.
+
+---
+
+# 4. Visão do DSAN
+
+O DSAN propõe uma arquitetura na qual uma entidade soberana pode possuir uma representação operacional capaz de:
+
+* manter identidade verificável;
+* manter estado;
+* exercer autoridade;
+* receber e delegar capacidades;
+* avaliar contexto;
+* manifestar presença;
+* expressar intenção;
+* solicitar ou conceder autorização;
+* executar operações;
+* produzir evidências;
+* estabelecer relações de confiança;
+* operar parcial ou temporariamente offline;
+* sincronizar e reconciliar estado posteriormente.
+
+A arquitetura deve permanecer independente de uma implementação tecnológica específica.
+
+O DSAN pode utilizar:
+
+* computadores;
+* servidores;
+* edge devices;
+* dispositivos embarcados;
+* hardware seguro;
+* redes locais;
+* Internet;
+* ambientes cloud;
+* ambientes híbridos;
+* sistemas federados.
+
+Nenhuma dessas tecnologias, isoladamente, define a soberania.
+
+---
+
+# 5. Modelo Arquitetural
+
+A arquitetura fundamental pode ser representada como:
+
+```text
+                    ENTIDADE SOBERANA
+                           │
+                           │ manifestação operacional
+                           ▼
+                        GUARDIAN
+                           │
+                  ┌────────┴────────┐
+                  │                 │
+             GuardianOS          Totem
+                  │                 │
+                  │          âncora física
+                  │             opcional
+                  ▼                 │
+               DSAN CORE ◄──────────┘
+                  │
+       identidade / estado /
+       autorização / delegação /
+       confiança / evidência /
+       comunicação / sincronização
+                  │
+                  ▼
+             DSAN NETWORK
+                  │
+          ┌───────┴────────┐
+          ▼                ▼
+       DREX            RadSecure
+```
+
+O diagrama representa relações arquiteturais e não uma sequência obrigatória de execução.
+
+Uma operação pode utilizar apenas parte desses componentes.
+
+---
+
+# 6. Entidade Soberana
+
+A Entidade Soberana é a referência ontológica fundamental do DSAN.
+
+Ela pode representar, conforme o domínio:
+
+* uma pessoa;
+* uma organização;
+* uma instituição;
+* uma entidade jurídica;
+* ou outra entidade capaz de possuir identidade e autoridade verificáveis.
+
+A soberania não pertence ao dispositivo.
+
+Não pertence ao Guardian.
+
+Não pertence ao GuardianOS.
+
+Não pertence à rede.
+
+Não pertence à plataforma externa.
+
+Esses componentes fornecem mecanismos para que a soberania possa ser representada, protegida e exercida.
+
+---
+
+# 7. Guardian
+
+O **Guardian** é a unidade operacional por meio da qual uma entidade soberana atua no ambiente computacional do DSAN.
+
+O Guardian pode administrar ou participar de:
+
+* identidade;
+* credenciais;
+* estado;
+* políticas;
+* capacidades;
+* agentes;
+* delegações;
+* autorizações;
+* comunicação;
+* sincronização;
+* evidências;
+* recuperação;
+* revogação.
+
+O Guardian não constitui uma nova entidade soberana independente.
+
+Sua função é representar operacionalmente a entidade soberana.
+
+Consequentemente:
+
+> **Entidade Soberana ≠ Guardian.**
+
+Essa distinção permite que a implementação de um Guardian seja substituída, migrada, replicada ou evoluída sem que isso implique necessariamente a destruição da identidade soberana.
+
+---
+
+# 8. GuardianOS
+
+O **GuardianOS** é o ambiente computacional responsável por proteger e executar as funções operacionais do Guardian.
+
+Ele pode fornecer mecanismos para:
+
+* inicialização segura;
+* gerenciamento de hardware;
+* isolamento;
+* identidade;
+* estado;
+* credenciais;
+* políticas;
+* capacidades;
+* comunicação;
+* proteção de operações sensíveis;
+* atualização;
+* recuperação;
+* diagnóstico.
+
+GuardianOS não é sinônimo de Guardian.
+
+O Guardian representa a unidade operacional.
+
+O GuardianOS constitui o ambiente no qual essa unidade é protegida e executada.
+
+O GuardianOS também não precisa ser um sistema operacional convencional. Pode assumir a forma de:
+
+* firmware;
+* runtime seguro;
+* appliance;
+* software embarcado;
+* ambiente virtual;
+* sistema operacional especializado.
+
+---
+
+# 9. Totem e Soberania Física
+
+O **Totem** representa uma função arquitetural destinada a fornecer uma âncora física verificável associada a uma entidade, Guardian ou operação.
+
+O Totem pode ser utilizado para:
+
+* proteger material criptográfico;
+* verificar presença;
+* registrar interação física;
+* receber confirmação humana;
+* participar de autorização;
+* proteger credenciais;
+* fornecer sinais físicos;
+* estabelecer condições adicionais para determinadas operações.
+
+Entretanto:
+
+> **O Totem não é a soberania.**
+
+A posse de um Totem não deve, por si só, conceder autoridade irrestrita.
+
+A perda, substituição ou atualização do Totem também não deve necessariamente destruir a identidade soberana.
+
+O Totem pode ser implementado como:
+
+* dispositivo dedicado;
+* wearable;
+* dispositivo móvel;
+* equipamento industrial;
+* dispositivo institucional;
+* hardware embarcado;
+* outro mecanismo físico de confiança.
+
+---
+
+# 10. GuardianRing
+
+O **GuardianRing** é uma possível implementação vestível da função Totem.
+
+Pode incorporar mecanismos como:
+
+* Secure Element;
+* NFC;
+* sensores;
+* presença;
+* interação gestual;
+* biometria;
+* comunicação local;
+* proteção de credenciais.
+
+Entretanto:
+
+> **GuardianRing ≠ Totem ≠ Guardian.**
+
+O GuardianRing é uma implementação física candidata.
+
+A arquitetura DSAN não depende de um modelo específico de wearable.
+
+---
+
+# 11. Identidade, Presença, Intenção e Autoridade
+
+O DSAN separa propriedades que frequentemente são combinadas em sistemas tradicionais.
+
+### Identidade
+
+Responde:
+
+> Quem é esta entidade?
+
+### Presença
+
+Responde:
+
+> A entidade está presente sob as condições relevantes?
+
+### Intenção
+
+Responde:
+
+> A entidade manifestou a intenção associada à operação?
+
+### Autoridade
+
+Responde:
+
+> Qual capacidade de ação pertence à entidade ou foi validamente delegada a ela?
+
+### Autorização
+
+Responde:
+
+> Esta operação concreta está autorizada nas condições atuais?
+
+Esses conceitos não são intercambiáveis.
+
+Portanto:
+
+```text
+IDENTIDADE ≠ PRESENÇA
+PRESENÇA ≠ INTENÇÃO
+INTENÇÃO ≠ AUTORIDADE
+AUTORIDADE ≠ AUTORIZAÇÃO
+AUTORIZAÇÃO ≠ EXECUÇÃO
+```
+
+---
+
+# 12. Autorização e Execução
+
+Uma autorização é uma decisão contextual relacionada a uma operação específica.
+
+Ela pode depender de:
+
+* identidade;
+* autoridade;
+* estado;
+* contexto;
+* política;
+* confiança;
+* delegação;
+* presença;
+* intenção;
+* condições temporais;
+* condições físicas;
+* outros requisitos.
+
+A autorização não é a execução.
+
+A existência de um artefato de autorização não significa necessariamente que a operação foi executada.
+
+Da mesma forma, uma identidade válida não representa autorização universal.
+
+Esse princípio reduz o risco de transformar uma credencial em uma permissão ilimitada.
+
+---
+
+# 13. Authorization Artifact
+
+O DSAN pode representar decisões de autorização por meio de **Authorization Artifacts** verificáveis.
+
+Um Authorization Artifact pode conter, conforme a implementação:
+
+* identidade ou referência à identidade;
+* operação;
+* escopo;
+* condições;
+* validade temporal;
+* delegação;
+* contexto;
+* assinatura;
+* referências causais;
+* evidências;
+* estado relevante.
+
+O artefato não é a autoridade soberana.
+
+Ele constitui uma representação verificável de uma decisão ou condição de autorização.
+
+---
+
+# 14. Estado Soberano
+
+O DSAN considera o estado uma propriedade fundamental da operação soberana.
+
+O estado pode representar:
+
+* capacidades;
+* delegações;
+* credenciais;
+* políticas;
+* revogações;
+* relações;
+* eventos;
+* sessões;
+* condições operacionais;
+* evidências;
+* checkpoints;
+* informações necessárias para validação.
+
+A arquitetura deve permitir que o estado seja:
+
+* verificável;
+* versionado;
+* associado a eventos;
+* sincronizado;
+* reconciliado;
+* recuperado.
+
+Uma réplica de estado não se torna automaticamente a autoridade sobre a entidade.
+
+---
+
+# 15. Delegação
+
+Uma entidade soberana pode delegar capacidades limitadas.
+
+A delegação deve possuir:
+
+* origem identificável;
+* escopo;
+* condições;
+* validade;
+* possibilidade de revogação;
+* rastreabilidade.
+
+Delegação não significa transferência de soberania.
+
+Um Guardian pode delegar uma capacidade limitada a um agente sem transferir a propriedade da autoridade soberana.
+
+A validade da autoridade derivada depende da validade da autoridade de origem.
+
+---
+
+# 16. Comunicação e DSAN Network
+
+A **DSAN Network** fornece o ambiente distribuído no qual Guardians e outros participantes autorizados podem interagir.
+
+Ela pode fornecer:
+
+* descoberta;
+* comunicação;
+* sincronização;
+* transporte de eventos;
+* propagação de evidências;
+* relações de confiança;
+* resolução;
+* mecanismos de coordenação.
+
+A rede é um meio.
+
+> **A rede transporta mensagens e evidências; ela não cria soberania.**
+
+Uma entidade soberana deve continuar conceitualmente existente mesmo quando não houver conectividade.
+
+---
+
+# 17. Operação Offline e Autonomia Local
+
+O DSAN não considera conectividade permanente um requisito universal.
+
+Um Guardian pode operar:
+
+* online;
+* offline;
+* em edge;
+* em rede local;
+* em modo híbrido.
+
+Entretanto:
+
+> **Offline não significa autonomia irrestrita.**
+
+A operação local deve respeitar:
+
+* estado conhecido;
+* políticas;
+* validade das credenciais;
+* limites de autoridade;
+* condições de segurança;
+* regras de revogação;
+* mecanismos de recuperação e sincronização.
+
+A reconexão não deve ressuscitar automaticamente uma autoridade que tenha sido validamente revogada.
+
+---
+
+# 18. Evidência, Proveniência e Auditoria
+
+O DSAN considera a produção de evidências parte importante da execução governada.
+
+Uma operação pode produzir:
+
+* eventos;
+* assinaturas;
+* hashes;
+* referências causais;
+* registros de estado;
+* artefatos de autorização;
+* evidências de presença;
+* evidências de decisão;
+* checkpoints;
+* provas de integridade.
+
+O objetivo não é apenas perguntar:
+
+> “A operação aconteceu?”
+
+Mas também:
+
+> “Qual entidade estava envolvida, sob qual autoridade, em qual estado, sob quais condições e com quais evidências?”
+
+---
+
+# 19. Segurança
+
+A segurança do DSAN é baseada em separação de responsabilidades.
+
+A arquitetura pode combinar:
+
+* criptografia;
+* identidade;
+* controle de acesso;
+* políticas;
+* isolamento;
+* hardware seguro;
+* presença física;
+* autenticação;
+* proteção de credenciais;
+* auditoria;
+* detecção de comprometimento;
+* revogação;
+* recuperação.
+
+Nenhum componente físico deve ser considerado automaticamente confiável apenas por ser hardware.
+
+Da mesma forma, uma assinatura criptográfica não prova, isoladamente, intenção humana ou legitimidade contextual.
+
+As propriedades devem ser avaliadas de acordo com o modelo de ameaça e a operação.
+
+---
+
+# 20. Governança
+
+Governança não é soberania.
+
+A governança estabelece regras para evolução, interoperabilidade, segurança, compatibilidade e manutenção do ecossistema.
+
+Ela pode tratar de:
+
+* evolução de protocolos;
+* versionamento;
+* compatibilidade;
+* depreciação;
+* segurança;
+* incidentes;
+* contribuições;
+* governança de repositórios;
+* propriedade intelectual;
+* aplicações de domínio;
+* recuperação;
+* revogação;
+* exceções;
+* auditoria.
+
+A governança deve preservar os invariantes arquiteturais sem transformar decisões administrativas em autoridade soberana sobre as entidades participantes.
+
+---
+
+# 21. Implementação e Independência Tecnológica
+
+O DSAN é independente de uma implementação específica.
+
+Uma implementação pode utilizar:
+
+* Python;
+* C/C++;
+* Rust;
+* microcontroladores;
+* servidores;
+* bancos de dados;
+* hardware seguro;
+* redes distribuídas;
+* blockchain;
+* DLT;
+* sistemas federados;
+* outros mecanismos.
+
+Essas tecnologias podem implementar propriedades do DSAN, mas não definem sua ontologia.
+
+Isso permite evolução tecnológica sem alteração necessária dos conceitos fundamentais.
+
+---
+
+# 22. Aplicações de Domínio
+
+O DSAN pode servir como arquitetura de base para diferentes aplicações.
+
+## 22.1 RadSecure
+
+O RadSecure aplica princípios DSAN ao domínio da saúde, especialmente:
+
+* governança longitudinal de dose radiológica;
+* rastreabilidade;
+* contexto clínico;
+* identificação de exames prévios;
+* suporte à decisão;
+* evidência de decisões;
+* interoperabilidade.
+
+## 22.2 DSAN-DREX
+
+O DSAN-DREX aplica mecanismos DSAN a cenários relacionados a:
+
+* identidade;
+* credenciais;
+* provas;
+* autorização;
+* integração empresarial;
+* ambientes financeiros e regulados.
+
+As aplicações não devem redefinir os fundamentos do DSAN.
+
+---
+
+# 23. Limitações
+
+O DSAN não elimina automaticamente:
+
+* comprometimento de hardware;
+* roubo de credenciais;
+* ataques de software;
+* erros humanos;
+* falhas de implementação;
+* problemas de governança;
+* dependências de infraestrutura;
+* inconsistências de integração.
+
+A arquitetura fornece mecanismos para reduzir, detectar, limitar ou evidenciar esses riscos.
+
+A segurança efetiva depende da implementação, do modelo de ameaça, das políticas e dos controles utilizados.
+
+---
+
+# 24. Propriedade Intelectual
+
+Determinados componentes e aplicações associados ao ecossistema DSAN podem estar sujeitos a processos ou estratégias de proteção de propriedade intelectual.
+
+Aplicações específicas, como o RadSecure, podem possuir tratamento próprio de propriedade intelectual, licenciamento ou confidencialidade.
+
+Este whitepaper descreve a arquitetura e não constitui, por si só, concessão de licença sobre componentes proprietários nem definição jurídica do escopo de eventuais direitos de propriedade intelectual.
+
+---
+
+# 25. Roadmap
+
+A evolução do DSAN pode compreender:
+
+### Fase 1 — Consolidação arquitetural
+
+* definição dos conceitos fundamentais;
+* Guardian System Definition;
+* protocolos;
+* invariantes;
+* documentação.
+
+### Fase 2 — Implementações de referência
+
+* DSAN Core;
+* GuardianOS;
+* Totem de referência;
+* simulador;
+* ferramentas de auditoria.
+
+### Fase 3 — Protocolos distribuídos
+
+* comunicação;
+* sincronização;
+* reconciliação;
+* confiança;
+* recuperação;
+* revogação.
+
+### Fase 4 — Aplicações
+
+* RadSecure;
+* DSAN-DREX;
+* outras aplicações de domínio.
+
+### Fase 5 — Interoperabilidade
+
+* APIs;
+* padrões;
+* gateways;
+* integração com sistemas externos;
+* ecossistemas federados.
+
+---
+
+# 26. Posição de Pesquisa
+
+O DSAN deve ser compreendido como uma arquitetura de pesquisa e engenharia voltada à questão:
+
+> **Como uma entidade pode manter controle verificável sobre sua identidade, autoridade, estado, relações e execução em ambientes digitais distribuídos e parcialmente independentes de infraestrutura centralizada?**
+
+A investigação pode abranger:
+
+* identidade soberana;
+* agentes autônomos;
+* autorização verificável;
+* presença;
+* hardware de confiança;
+* sistemas distribuídos;
+* sincronização;
+* proveniência;
+* governança;
+* segurança;
+* interoperabilidade;
+* aplicações críticas.
+
+O DSAN não pressupõe que uma única tecnologia resolva esses problemas.
+
+Sua proposta é estrutural e composicional.
+
+---
+
+# 27. Conclusão
+
+O DSAN propõe uma mudança de perspectiva.
+
+Em arquiteturas tradicionais:
+
+```text
+PLATAFORMA
+    ↓
+CONTA
+    ↓
+CREDENCIAL
+    ↓
+EXECUÇÃO
+```
+
+No modelo DSAN:
+
+```text
+ENTIDADE SOBERANA
+        ↓
+     GUARDIAN
+        ↓
+   GuardianOS
+        ↓
+    DSAN CORE
+        ↓
+   DSAN NETWORK
+        ↓
+ APLICAÇÕES / SERVIÇOS
+```
+
+Com mecanismos adicionais de:
+
+```text
+PRESENÇA
+INTENÇÃO
+AUTORIZAÇÃO
+DELEGAÇÃO
+ESTADO
+CONFIANÇA
+EVIDÊNCIA
+GOVERNANÇA
+```
+
+O Totem pode participar quando uma operação exigir uma dimensão física verificável, mas não constitui a fonte da soberania.
+
+O Guardian manifesta operacionalmente a entidade.
+
+O GuardianOS estabelece a fronteira computacional de proteção e execução.
+
+O DSAN Core estrutura mecanismos comuns.
+
+A DSAN Network permite interação distribuída.
+
+As aplicações utilizam esses mecanismos em seus respectivos domínios.
+
+A governança preserva coerência, segurança e continuidade.
+
+Portanto:
+
+> **A soberania pertence à entidade; a tecnologia fornece os mecanismos para que essa soberania possa ser representada, protegida, exercida e verificada.**
+
+---
+
+# 28. Visão
+
+> **Um ambiente digital no qual entidades soberanas possam atuar por meio de representações verificáveis, exercer autoridade de forma contextual, delegar capacidades de maneira limitada, preservar seu estado e produzir evidências de suas ações — independentemente de uma única plataforma, infraestrutura ou tecnologia.**
+
+**DSAN — Sovereignty by Architecture.**
