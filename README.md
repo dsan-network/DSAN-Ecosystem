@@ -1,411 +1,628 @@
-# 🛡️ DSAN Ecosystem
+# DSAN — Decentralized Sovereign Agent Network
 
-> **An Open Architecture for Governed Execution**
+**Open architectural framework for sovereign digital entities**
 
-![License](https://img.shields.io/badge/license-Apache%202.0-blue.svg)
-![Status](https://img.shields.io/badge/status-Research-green)
-![Architecture](https://img.shields.io/badge/specification-open-success)
+DSAN (Decentralized Sovereign Agent Network) is an open architectural framework for representing, governing, and operating **sovereign digital entities** in distributed computational environments.
 
----
+The architecture defines how concepts such as **identity, presence, intent, authority, authorization, state, delegation, communication, execution, evidence, trust, and governance** can be represented and coordinated without requiring a single centralized authority.
 
-# Introduction
-
-The **Decentralized Sovereign Agent Network (DSAN)** is an open architectural framework for governing execution in autonomous and distributed systems.
-
-Rather than replacing existing technologies, DSAN introduces an additional protocol layer responsible for determining **whether**, **when**, and **under which conditions** an action may be executed.
-
-Modern software already provides mechanisms for identity, communication, distributed consensus, and decision making.
-
-DSAN focuses on a different problem:
-
-> **Execution itself.**
-
-Execution becomes an explicit protocol event governed by verifiable rules rather than an implicit consequence of a decision.
+DSAN is intentionally **technology-independent**. Specific implementations may use different operating systems, hardware, cryptographic mechanisms, databases, networks, or application stacks.
 
 ---
 
-# Why DSAN?
+## 1. Architectural Purpose
 
-Autonomous systems continue to increase their decision-making capabilities.
+DSAN addresses a fundamental problem in distributed computing:
 
-Artificial Intelligence, distributed services, robotics, healthcare platforms and financial infrastructures are increasingly capable of generating actions without continuous human intervention.
+> How can a digital entity maintain a coherent identity, authority, state, presence, and ability to act across multiple computational environments while preserving verifiability, control, and continuity?
 
-Most current architectures still assume:
+The architecture therefore separates concepts that are frequently conflated in conventional systems:
 
+* identity is not presence;
+* presence is not authority;
+* authority is not authorization;
+* authorization is not execution;
+* execution is not evidence;
+* a physical device is not the sovereign entity;
+* software infrastructure does not itself constitute sovereignty.
+
+These distinctions form the foundation of DSAN.
+
+---
+
+## 2. Core Architectural Model
+
+The DSAN architecture is organized around a **Sovereign Digital Entity** and the mechanisms through which that entity manifests and operates computationally.
+
+```text
+                  SOVEREIGN DIGITAL ENTITY
+                             │
+                             │ operational manifestation
+                             ▼
+                          GUARDIAN
+                             │
+                   ┌─────────┴─────────┐
+                   │                   │
+                   ▼                   ▼
+              GuardianOS             Totem
+                   │             optional physical
+                   │                 anchor
+                   │
+                   ▼
+                DSAN CORE
+                   │
+          protocols / state /
+       authorization / evidence
+                   │
+                   ▼
+              DSAN NETWORK
+                   │
+          ┌────────┴────────┐
+          ▼                 ▼
+        DREX            RadSecure
 ```
 
-Decision
-↓
-Execution
+This diagram represents **architectural relationships**, not a mandatory execution pipeline.
 
-```
-
-This assumption becomes progressively more dangerous as software gains autonomy.
-
-DSAN proposes a different execution model.
-
-```
-
-Decision
-↓
-Validation
-↓
-Execution
-
-```
-
-Execution is no longer automatic.
-
-Execution becomes governed.
+A DSAN implementation may use only a subset of these components depending on its context.
 
 ---
 
-# Execution Governance
+## 3. Sovereign Digital Entity
 
-Execution Governance is the central architectural concept introduced by DSAN.
+The **Sovereign Digital Entity** is the fundamental conceptual reference of the architecture.
 
-A valid request is not sufficient to authorize execution.
+Sovereignty belongs to the entity.
 
-Instead, execution becomes the result of multiple independent verification stages.
+The entity may possess:
 
-Typical governance stages include:
+* a sovereign identity;
+* persistent or evolving state;
+* authority;
+* intent;
+* presence;
+* delegated authority;
+* relationships of trust;
+* authorization capabilities;
+* communication capabilities;
+* controlled execution capabilities.
 
-- Identity Verification
-- Context Evaluation
-- Policy Validation
-- Consensus (optional)
-- Physical Authorization (optional)
-- Execution Authorization
-- Evidence Generation
-- Ledger Registration
+The entity is not equivalent to any particular device, software process, cryptographic key, or network node.
 
-Each stage contributes independently to the final execution decision.
-
----
-
-# Architectural Principles
-
-Every DSAN implementation follows the same architectural principles.
-
-## Explicit Execution
-
-Critical actions SHALL be explicitly authorized.
+Implementations may represent the entity through different technical mechanisms while preserving the architectural distinction between the entity and its computational manifestations.
 
 ---
 
-## Identity Before Authority
+## 4. Guardian
 
-Every execution request originates from a verifiable identity.
+The **Guardian** is the operational unit through which a sovereign digital entity acts within a computational environment.
 
----
+The Guardian is therefore neither:
 
-## Policy Before Execution
+* the sovereign entity itself;
+* the source of sovereignty;
+* the operating system;
+* the physical Totem;
+* nor the DSAN network.
 
-Execution is governed by explicit policies.
+The Guardian provides an operational boundary through which identity, state, authority, authorization, execution, and protection mechanisms may be coordinated.
 
----
-
-## Context Awareness
-
-Execution depends on operational context.
-
----
-
-## Physical Accountability
-
-Some actions require explicit physical authorization.
+A Guardian may operate entirely in software or may be associated with physical infrastructure.
 
 ---
 
-## Independent Verification
+## 5. GuardianOS
 
-Execution history shall be independently verifiable.
+**GuardianOS** is the computational environment responsible for supporting and protecting the operational Guardian.
+
+It may provide mechanisms for:
+
+* secure initialization;
+* execution control;
+* local state management;
+* authorization enforcement;
+* cryptographic operations;
+* interaction with physical anchors;
+* protected services;
+* communication;
+* hardware abstraction;
+* recovery and controlled evolution.
+
+GuardianOS is an **implementation layer**.
+
+It does not define the sovereignty of the entity and does not replace the DSAN architectural model.
 
 ---
 
-## Minimal Trust
+## 6. Totem
 
-Trust is derived from evidence rather than institutional assumptions.
+The **Totem** is an optional physical sovereignty anchor.
+
+It provides a possible physical boundary through which a sovereign entity can establish or reinforce relationships between computational authority and a controlled physical environment.
+
+A Totem may participate in:
+
+* physical authorization;
+* presence verification;
+* secure interaction;
+* protected key operations;
+* execution release;
+* local autonomy;
+* recovery or revocation mechanisms.
+
+The Totem is **not the sovereign entity** and does not independently create authority.
+
+Its use is contextual and operation-dependent.
+
+A DSAN implementation does not necessarily require a physical Totem.
 
 ---
 
-# High-Level Architecture
+## 7. GuardianRing
 
-```
+A **GuardianRing** is one possible wearable implementation of a Totem.
 
-                   DSAN Ecosystem
+The term describes a physical implementation, not a separate architectural source of sovereignty.
 
-                         │
+Other physical implementations may exist, including dedicated devices or other secure hardware configurations.
 
-             Execution Governance Layer
+The architecture therefore distinguishes:
 
-                         │
-
-      ┌──────────────────┼──────────────────┐
-
-      ▼                  ▼                  ▼
-
- Identity           Policy Engine      Context Engine
-
-      │                  │                  │
-
-      └──────────────┬──────────────────────┘
-
-                     ▼
-
-        Execution Authority Function
-
-                     │
-
-        Guardian Authorization (optional)
-
-                     │
-
-                     ▼
-
-              Governed Execution
-
-                     │
-
-                     ▼
-
-             Evidence Generation
-
-                     │
-
-                     ▼
-
-               Execution Ledger
-
-                     │
-
-                     ▼
-
-          Replay & Independent Audit
-
+```text
+Sovereign Entity
+        │
+     Guardian
+        │
+   GuardianOS
+        │
+      Totem
+        │
+ GuardianRing
+   (one possible
+   implementation)
 ```
 
 ---
 
-# Core Concepts
+## 8. Identity, Presence, Intent and Authority
 
-The architecture is organized around several protocol concepts.
+DSAN explicitly separates four related concepts.
 
-## Identity
+### Identity
 
-Provides cryptographic attribution.
+Represents **who or what the entity is** within the system.
 
-Identity answers:
+### Presence
 
-> Who is requesting execution?
+Represents whether and how the entity is currently manifested or reachable within a particular computational context.
 
----
+### Intent
 
-## Context
+Represents what the entity seeks or authorizes as an intended action or state transition.
 
-Represents the operational environment.
+### Authority
 
-Examples include:
+Represents the legitimate capacity of the entity to determine or influence actions within an applicable scope.
 
-- location;
-- operational mode;
-- execution history;
-- environmental conditions.
-
-Context answers:
-
-> Under which conditions is execution occurring?
+These concepts may interact, but none should be treated as interchangeable.
 
 ---
 
-## Policy
+## 9. Authorization
 
-Defines admissibility.
+Authorization is the contextual mechanism through which a proposed operation is evaluated against the applicable authority, state, policy, delegation, and security conditions.
 
-Policy determines whether execution is permitted.
+Authorization does not create sovereignty.
 
----
+A conceptual authorization decision may depend on:
 
-## Guardian
-
-Guardian introduces physical authorization into the execution pipeline.
-
-Guardian implementations may include:
-
-- biometrics;
-- NFC credentials;
-- secure hardware;
-- trusted execution devices.
-
-Guardian answers:
-
-> Was execution intentionally authorized?
-
----
-
-## Evidence
-
-Execution produces verifiable evidence.
-
-Evidence allows independent reconstruction of the authorization process.
-
----
-
-## Ledger
-
-Execution history is preserved using integrity-preserving storage.
-
-The architecture intentionally does not require blockchain technology.
-
----
-
-# Trust Model
-
-DSAN defines four complementary trust domains.
-
-- Cryptographic Trust
-- Policy Trust
-- Physical Trust
-- Evidence Trust
-
-Governed execution is achieved only when every mandatory trust domain has been satisfied.
-
----
-
-# Governance Model
-
-DSAN separates:
-
-Intent
-
-↓
-
+```text
 Identity
-
-↓
-
+   +
+Presence
+   +
+Intent
+   +
+Authority
+   +
+State
+   +
+Delegation
+   +
+Context
+   +
 Policy
+   +
+Security conditions
+   ↓
+Authorization Decision
+```
 
-↓
-
-Authorization
-
-↓
-
-Execution
-
-↓
-
-Evidence
-
-↓
-
-Ledger
-
-This separation prevents execution from becoming an implicit consequence of software decisions.
+Different DSAN implementations may realize these mechanisms differently.
 
 ---
 
-# Repository Structure
+## 10. Authorization Artifact
 
+An **Authorization Artifact** is a verifiable representation of an authorization decision or authorization state.
+
+Depending on the implementation, it may contain or reference:
+
+* the authorized entity;
+* operation or capability;
+* contextual constraints;
+* validity conditions;
+* delegation information;
+* cryptographic evidence;
+* expiration;
+* revocation state;
+* provenance.
+
+The artifact allows downstream components to verify that an operation has received the required authorization without assuming that authorization itself constitutes sovereignty.
+
+---
+
+## 11. Sovereign State
+
+A sovereign entity may maintain a state that evolves over time.
+
+State may include:
+
+* operational status;
+* authorization status;
+* delegated capabilities;
+* trust relationships;
+* revocation information;
+* pending operations;
+* synchronization state;
+* evidence;
+* recovery information.
+
+State continuity is particularly important in distributed and intermittently connected environments.
+
+Offline operation does not imply unrestricted autonomy.
+
+A previously revoked or expired authority must not automatically become valid merely because a node is temporarily disconnected.
+
+---
+
+## 12. Sovereign Presence
+
+Presence is treated independently from identity and authorization.
+
+A digital entity may be:
+
+* cryptographically identifiable but not currently present;
+* present but not authorized for a specific operation;
+* authorized for an operation but not physically anchored;
+* physically anchored without that anchor itself being the sovereign entity.
+
+Presence mechanisms may be implemented through software, cryptographic protocols, network relationships, physical interaction, or combinations of these mechanisms.
+
+---
+
+## 13. Sovereign Delegation
+
+Delegation allows an entity to transfer or derive a bounded capability from an existing authority.
+
+Delegation should be:
+
+* explicit;
+* scoped;
+* verifiable;
+* time-bounded when appropriate;
+* revocable;
+* traceable.
+
+Derived authority cannot exceed the authority from which it originates.
+
+Revocation of the originating authority must propagate according to the applicable protocol and consistency model.
+
+---
+
+## 14. Sovereign Communication
+
+DSAN communication mechanisms allow sovereign entities and their Guardians to exchange information while preserving:
+
+* identity;
+* provenance;
+* authorization context;
+* integrity;
+* confidentiality where required;
+* state consistency;
+* delegation constraints.
+
+Communication is therefore not merely message transport.
+
+It is part of the mechanism through which sovereign relationships are maintained across distributed environments.
+
+---
+
+## 15. Execution
+
+Execution represents the actual realization of an authorized operation within a computational environment.
+
+DSAN maintains the distinction:
+
+```text
+Authority
+    ≠
+Authorization
+    ≠
+Execution
 ```
+
+A system may therefore determine that an entity has authority without automatically executing an operation.
+
+Likewise, an authorization decision may be subject to additional execution-time conditions.
+
+Individual implementations may introduce mechanisms such as policy validation, consensus, physical authorization, local security checks, or other enforcement mechanisms.
+
+These are implementation choices rather than universal architectural requirements.
+
+---
+
+## 16. Evidence and Auditability
+
+DSAN supports the concept of **verifiable evidence** associated with relevant operations and state transitions.
+
+Evidence may include:
+
+* signed events;
+* authorization artifacts;
+* execution records;
+* state transitions;
+* provenance;
+* timestamps;
+* cryptographic hashes;
+* audit records.
+
+An implementation may use append-only ledgers, Merkle structures, distributed logs, databases, or other mechanisms to preserve evidence.
+
+No particular storage technology is mandated by the architecture.
+
+---
+
+## 17. Distributed and Offline Operation
+
+DSAN is designed to support distributed environments in which connectivity, synchronization, or centralized availability may be limited.
+
+A node may therefore maintain local capabilities and state while disconnected.
+
+However:
+
+> **Offline operation does not imply unrestricted sovereignty.**
+
+Local autonomy must remain bounded by:
+
+* previously established authority;
+* authorization constraints;
+* validity periods;
+* revocation mechanisms;
+* local security policy;
+* synchronization rules.
+
+Reconnection must not be treated as a mechanism for resurrecting invalid authority.
+
+---
+
+## 18. Trust
+
+Trust relationships within DSAN are contextual and verifiable.
+
+Trust may exist between:
+
+* sovereign entities;
+* Guardians;
+* computational nodes;
+* applications;
+* physical anchors;
+* institutional environments.
+
+Trust does not automatically imply authority.
+
+Likewise, authority does not necessarily imply unrestricted trust.
+
+The architecture therefore favors explicit relationships and verifiable evidence over implicit trust assumptions.
+
+---
+
+## 19. Governance
+
+Governance defines the rules by which an implementation or network maintains architectural coherence.
+
+Governance may address:
+
+* protocol evolution;
+* authorization policies;
+* participation rules;
+* software evolution;
+* security requirements;
+* auditability;
+* recovery;
+* revocation;
+* interoperability;
+* compatibility;
+* dispute and exception handling.
+
+Governance does not create sovereignty.
+
+It governs the mechanisms through which sovereignty is represented and exercised within a given environment.
+
+---
+
+## 20. Technology Independence
+
+DSAN does not require a specific technology stack.
+
+Implementations may use:
+
+* embedded systems;
+* secure elements;
+* conventional servers;
+* cloud infrastructure;
+* edge computing;
+* distributed databases;
+* blockchain or distributed ledgers;
+* cryptographic protocols;
+* mobile devices;
+* IoT devices;
+* enterprise systems.
+
+The architectural concepts must remain distinguishable from their technological implementations.
+
+For example:
+
+```text
+Totem
+    ≠
+ESP32
+
+GuardianOS
+    ≠
+a particular operating system
+
+DSAN Core
+    ≠
+a particular programming language
 
 DSAN Network
-
-├── dsan-network
-│
-├── dsan-ecosystem
-│
-├── dsan-core
-│
-├── dsan-guardian
-│
-├── dsan-simulator
-│
-└── Domain Applications
-
+    ≠
+a particular blockchain
 ```
 
 ---
 
-# Relationship with Other Projects
+## 21. Ecosystem Repositories
 
-## DSAN Core
+The DSAN ecosystem is organized by architectural responsibility.
 
-Implements the execution kernel defined by this architecture.
+| Repository               | Role                                                                     |
+| ------------------------ | ------------------------------------------------------------------------ |
+| **DSAN-Ecosystem**       | Architecture, principles, protocols, documentation and public reference  |
+| **dsan-core**            | Experimental/reference implementation of selected DSAN mechanisms        |
+| **GuardianOS**           | Guardian computational environment and physical-reference implementation |
+| **DSAN Simulator**       | Simulation, experimentation and educational research                     |
+| **DSAN-DREX-ENTERPRISE** | Enterprise/domain application based on DSAN concepts                     |
+| **RadSecure**            | Healthcare/domain application based on DSAN concepts                     |
 
----
+Domain applications are **not part of the architectural core**.
 
-## DSAN Guardian
-
-Implements the Guardian Protocol using dedicated hardware.
-
----
-
-## DSAN Simulator
-
-Provides educational and experimental implementations.
-
----
-
-## Domain Applications
-
-The architecture is intentionally domain independent.
-
-Current applications include:
-
-- RadSecure
-- AI systems
-- Healthcare
-- Industrial Automation
-- Critical Infrastructure
-- Financial Systems
+They demonstrate how DSAN concepts can be applied to specific operational environments.
 
 ---
 
-# Specifications
+## 22. Implementation Maturity
 
-The conceptual architecture is formally described by the DSAN Specification Series.
+DSAN distinguishes architectural maturity from implementation maturity.
 
-Important specifications include:
+A concept may be:
 
-- Architecture
-- Identity
-- Execution Model
-- Guardian Protocol
-- Execution Policy
-- Execution Evidence
-- Execution Ledger
+* **Conceptual** — formally defined but not implemented;
+* **Experimental** — implemented for research or testing;
+* **Reference** — implemented to demonstrate an architectural mechanism;
+* **Application** — integrated into a domain-specific system;
+* **Production** — deployed under operational requirements and appropriate validation.
 
----
-
-# Research Status
-
-DSAN remains an active research initiative.
-
-Current research areas include:
-
-- Execution Governance
-- Sovereign Identity
-- Deterministic Replay
-- Physical Authorization
-- Trusted Execution
-- Distributed Verification
+The existence of source code does not by itself imply production readiness, certification, formal verification, or security certification.
 
 ---
 
-# License
+## 23. Security Philosophy
 
-Apache License 2.0.
+Security within DSAN is based on layered and contextual controls.
+
+Relevant mechanisms may include:
+
+* cryptographic identity;
+* protected execution;
+* authorization;
+* delegation;
+* revocation;
+* physical anchoring;
+* state integrity;
+* provenance;
+* auditability;
+* secure communication;
+* recovery.
+
+No individual mechanism should be interpreted as providing absolute security.
+
+Security claims must remain proportional to the implementation, threat model, testing, and evidence available.
 
 ---
 
-# Founder
+## 24. Research Direction
 
-**Alessandro Turok da Silva Collares**
+DSAN provides a foundation for research into:
 
-Founder — DSAN Network
+* sovereign digital identity;
+* distributed authorization;
+* autonomous digital agents;
+* edge sovereignty;
+* physical-digital trust boundaries;
+* authorization artifacts;
+* decentralized governance;
+* offline-capable systems;
+* provenance-aware execution;
+* sovereign state management;
+* secure human-machine interaction;
+* distributed institutional systems.
+
+The architecture is intentionally open to different implementations and research directions.
 
 ---
 
-> **DSAN transforms execution from an implicit software operation into a governed architectural capability.**
+## 25. Relationship to the Guardian System Definition
+
+The **Guardian System Definition** provides the architectural definition of the Guardian-centered model used by this ecosystem.
+
+The repositories in this organization should implement, demonstrate, or apply the architecture without redefining its fundamental ontology independently.
+
+The distinction is intentional:
+
+```text
+Guardian System Definition
+            │
+            ▼
+     Architectural model
+            │
+            ▼
+      DSAN-Ecosystem
+            │
+     ┌──────┼─────────┐
+     ▼      ▼         ▼
+   Core  GuardianOS  Simulator
+     │
+   ┌─┴─────────────┐
+   ▼               ▼
+ DREX           RadSecure
+```
+
+---
+
+## 26. Fundamental Principle
+
+The DSAN architecture can be summarized as follows:
+
+> **Sovereignty belongs to the entity; the Guardian manifests it operationally; GuardianOS protects and executes; the Totem may anchor it physically; DSAN Core structures its mechanisms and relationships; the DSAN Network enables distributed interaction; and governance preserves coherence and continuity.**
+
+---
+
+## 27. Status
+
+DSAN is an evolving open architecture and research ecosystem.
+
+Individual repositories may have different levels of maturity and different licensing or access conditions.
+
+The architectural repository should therefore not be interpreted as a declaration that every component of the ecosystem is production-ready.
+
+---
+
+## License
+
+The **DSAN-Ecosystem** repository is distributed under the **Apache License 2.0**.
+
+See [`LICENSE`](LICENSE) for the complete license text.
+
+Copyright © 2026 Alessandro Turok da Silva Collares.
