@@ -14,14 +14,14 @@ This document defines architectural relationships and responsibilities. It does 
 
 # 2. Architectural Foundation
 
-The fundamental reference of DSAN is the **Sovereign Digital Entity**.
+The fundamental reference of DSAN is the **Digital Sovereign Entity (DSE)**.
 
 A sovereign entity may manifest computationally through one or more operational components while maintaining a conceptual distinction between the entity itself and the infrastructure through which it acts.
 
 The principal relationship is:
 
 ```text
-Sovereign Digital Entity
+Digital Sovereign Entity
             │
             ▼
          Guardian
@@ -37,7 +37,7 @@ Sovereign Digital Entity
 The DSAN Core and DSAN Network provide mechanisms and environments through which these entities, Guardians, and applications may interact.
 
 ```text
-                Sovereign Digital Entity
+                Digital Sovereign Entity
                            │
                            ▼
                         Guardian
@@ -63,9 +63,11 @@ This representation describes **architectural relationships**, not a mandatory e
 
 # 3. Architectural Entities
 
-## 3.1 Sovereign Digital Entity
+## 3.1 Digital Sovereign Entity (DSE)
 
-The Sovereign Digital Entity is the conceptual owner of sovereignty within the architecture.
+**Canonical terminology (DEC-GRD-021, approved 2026-10-27):** *Digital Sovereign Entity (DSE)* is the canonical English architectural term. *Sovereign Digital Entity* is an approved historical/descriptive alias for the **same conceptual entity**, not a distinct actor, protocol type, or additional source of authority. The Portuguese explanatory translation is *Entidade Digital Soberana (EDS)*. This terminology choice does not change serialized identifiers, DID methods, authorization conditions, or the nature of sovereignty.
+
+The Digital Sovereign Entity is the conceptual owner of sovereignty within the architecture.
 
 The entity may possess:
 
@@ -86,7 +88,7 @@ These mechanisms provide representations, controls, evidence, and operational ca
 
 # 4. Guardian
 
-The Guardian is the operational unit through which a sovereign digital entity acts within a computational environment.
+The Guardian is the operational unit through which a digital sovereign entity acts within a computational environment.
 
 The Guardian provides a boundary between the sovereign entity and the computational environment in which its operations occur.
 
@@ -804,4 +806,4 @@ The exact composition depends on the operational context.
 
 The central architectural principle is:
 
-> **A sovereign digital entity is not defined by the technology through which it is represented. The architecture defines the relationships and constraints through which sovereignty can be manifested, verified, authorized, exercised, and preserved across computational environments.**
+> **A digital sovereign entity is not defined by the technology through which it is represented. The architecture defines the relationships and constraints through which sovereignty can be manifested, verified, authorized, exercised, and preserved across computational environments.**
