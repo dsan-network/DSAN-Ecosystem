@@ -38,7 +38,7 @@ Relevant concepts include:
 * distributed coordination;
 * decentralized communication.
 
-DSAN shares these concerns but places additional emphasis on the relationship between a sovereign digital entity and the mechanisms through which that entity manifests authority and executes operations.
+DSAN shares these concerns but places additional emphasis on the relationship between a digital sovereign entity and the mechanisms through which that entity manifests authority and executes operations.
 
 The DSAN architecture therefore does not attempt to replace distributed-systems theory.
 
@@ -476,7 +476,7 @@ Existing technologies can already provide mechanisms for:
 * provenance;
 * execution control.
 
-The DSAN architectural contribution is instead concerned with how these mechanisms can be **composed around the concept of a sovereign digital entity while preserving explicit distinctions among identity, presence, intent, authority, authorization, state, delegation, execution, and evidence**.
+The DSAN architectural contribution is instead concerned with how these mechanisms can be **composed around the concept of a digital sovereign entity while preserving explicit distinctions among identity, presence, intent, authority, authorization, state, delegation, execution, and evidence**.
 
 This distinction should remain the basis for comparisons with related systems.
 
@@ -558,7 +558,7 @@ DSAN intersects with established technologies in distributed systems, identity, 
 
 The architecture does not depend on replacing these technologies.
 
-Instead, it provides a framework for organizing their roles around a sovereign digital entity and maintaining explicit distinctions between:
+Instead, it provides a framework for organizing their roles around a digital sovereign entity and maintaining explicit distinctions between:
 
 ```text id="rw010"
 Identity
