@@ -32,7 +32,7 @@ These distinctions form the foundation of DSAN.
 
 ## 2. Core Architectural Model
 
-The DSAN architecture is organized around a **Sovereign Digital Entity** and the mechanisms through which that entity manifests and operates computationally.
+The DSAN architecture is organized around a **Digital Sovereign Entity (DSE)** and the mechanisms through which that entity manifests and operates computationally.
 
 ```text
                   SOVEREIGN DIGITAL ENTITY
@@ -68,9 +68,9 @@ A DSAN implementation may use only a subset of these components depending on its
 
 ---
 
-## 3. Sovereign Digital Entity
+## 3. Digital Sovereign Entity (DSE)
 
-The **Sovereign Digital Entity** is the fundamental conceptual reference of the architecture.
+The **Digital Sovereign Entity** is the fundamental conceptual reference of the architecture.
 
 Sovereignty belongs to the entity.
 
@@ -95,7 +95,7 @@ Implementations may represent the entity through different technical mechanisms 
 
 ## 4. Guardian
 
-The **Guardian** is the operational unit through which a sovereign digital entity acts within a computational environment.
+The **Guardian** is the operational unit through which a digital sovereign entity acts within a computational environment.
 
 The Guardian is therefore neither:
 
