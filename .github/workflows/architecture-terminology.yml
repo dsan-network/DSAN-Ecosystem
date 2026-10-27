@@ -1,13 +1,7 @@
 name: architecture-terminology-conformance
 
 on:
-  pull_request:
-    paths:
-      - 'README.md'
-      - 'docs/**'
-      - 'references/**'
-      - 'tests/test_dse_terminology.py'
-      - '.github/workflows/architecture-terminology.yml'
+  pull_request: {}
   push:
     branches: [main]
     paths:
