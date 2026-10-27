@@ -31,7 +31,7 @@ Sovereignty
 Governance
 ```
 
-Sovereignty belongs to the Sovereign Digital Entity.
+Sovereignty belongs to the Digital Sovereign Entity (DSE), as defined in [the DSAN architecture](architecture.md).
 
 Governance establishes rules for maintaining and evolving the technological and organizational environment through which sovereign entities may operate.
 

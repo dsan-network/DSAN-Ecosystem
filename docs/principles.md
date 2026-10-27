@@ -14,7 +14,7 @@ They complement the DSAN Architecture and the Guardian System Definition.
 
 # 2. Sovereignty Belongs to the Entity
 
-Sovereignty belongs to the **Sovereign Digital Entity**.
+Sovereignty belongs to the **Digital Sovereign Entity (DSE)**.
 
 No device, software component, cryptographic key, network, database, or protocol independently constitutes the sovereign entity.
 
@@ -24,7 +24,7 @@ Technical mechanisms provide means for representing, protecting, verifying, and 
 
 # 3. Guardian Is an Operational Manifestation
 
-The **Guardian** is the operational unit through which a sovereign digital entity acts within a computational environment.
+The **Guardian** is the operational unit through which a digital sovereign entity acts within a computational environment.
 
 Guardian is not synonymous with the sovereign entity.
 
